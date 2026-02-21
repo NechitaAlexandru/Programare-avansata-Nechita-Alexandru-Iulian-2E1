@@ -1,18 +1,18 @@
 void main() {
     int smallN = 20;
-    IO.println("--- Generam pt (n = " + smallN + ") ---");
+    System.out.println("--- Generam pt (n = " + smallN + ") ---");
 
     int[][] smallRectangle = createRectangle(smallN);
     int[][] smallCircle = createCircle(smallN);
 
-    IO.println("Rectangle Image:");
-    IO.println(buildMatrixString(smallRectangle));
+    System.out.println("Rectangle Image:");
+    System.out.println(buildMatrixString(smallRectangle));
 
-    IO.println("Circle Image:");
-    IO.println(buildMatrixString(smallCircle));
+    System.out.println("Circle Image:");
+    System.out.println(buildMatrixString(smallCircle));
 
     int largeN = 28048; //pt 28049 primim out of memory
-    IO.println("\n--- Testare (n = " + largeN + ") ---");
+    System.out.println("\n--- Testare (n = " + largeN + ") ---");
 
     long startTime = System.nanoTime();
 
@@ -22,8 +22,8 @@ void main() {
     long endTime = System.nanoTime();
     long durationMs = (endTime - startTime) / 1_000_000;
 
-    IO.println("Generare cu succes.");
-    IO.println("Timp total executie: " + (endTime - startTime) + " ns (" + durationMs + " ms)");
+    System.out.println("Generare cu succes.");
+    System.out.println("Timp total executie: " + (endTime - startTime) + " ns (" + durationMs + " ms)");
 }
 
 public static int[][] createRectangle(int n) {
@@ -43,7 +43,7 @@ public static int[][] createRectangle(int n) {
 public static int[][] createCircle(int n) {
     int[][] image = new int[n][n];
     double center = (n-1) / 2.0;
-    double radius = n / 4   ;
+    double radius = (double) n / 4   ;
 
     for (int i = 0; i < n; i++) {
         for (int j = 0; j < n; j++) {
