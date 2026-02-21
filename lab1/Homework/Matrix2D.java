@@ -42,13 +42,13 @@ public static int[][] createRectangle(int n) {
 
 public static int[][] createCircle(int n) {
     int[][] image = new int[n][n];
-    int center = n / 2;
-    int radius = n / 4;
+    double center = (n-1) / 2.0;
+    double radius = n / 4   ;
 
     for (int i = 0; i < n; i++) {
         for (int j = 0; j < n; j++) {
-            int dx = i - center;
-            int dy = j - center;
+            double dx = i - center;
+            double dy = j - center;
 
             if ((dx * dx) + (dy * dy) <= (radius * radius)) {
                 image[i][j] = 255;
@@ -61,8 +61,8 @@ public static int[][] createCircle(int n) {
 public static String buildMatrixString(int[][] image) {
     StringBuilder sb = new StringBuilder();
 
-    char darkPixel = '█';
-    char whitePixel = '░';
+        char darkPixel = '\u2591';
+        char whitePixel ='\u2588';
 
     for (int i = 0; i < image.length; i++) {
         for (int j = 0; j < image[i].length; j++) {
