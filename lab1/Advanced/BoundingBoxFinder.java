@@ -5,7 +5,7 @@ public class BoundingBoxFinder {
     public static void findBoundary(boolean[][] matrix) {
 
         if (matrix == null || matrix.length == 0 || matrix[0].length == 0) {
-            System.out.println("Matrix is empty.");
+            System.out.println("Matricea e goala.");
             return;
         }
 
@@ -34,11 +34,11 @@ public class BoundingBoxFinder {
 
 
         if (maxRow == -1) {
-            System.out.println("No shape found in the matrix.");
+            System.out.println("Nicio forma gasita.");
         } else {
-            System.out.println("Bounding Box found at:");
-            System.out.println("Top-Left: (" + minRow + ", " + minCol + ")");
-            System.out.println("Bottom-Right: (" + maxRow + ", " + maxCol + ")");
+            System.out.println("Bounding Box gasit la:");
+            System.out.println("Stanga Sus: (" + minRow + ", " + minCol + ")");
+            System.out.println("Dreapta jos: (" + maxRow + ", " + maxCol + ")");
         }
     }
 
