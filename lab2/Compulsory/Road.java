@@ -21,9 +21,9 @@ class Road {
         this.speedLimit = speedLimit;
         this.loc1 = loc1;
         this.loc2 = loc2;
- /**
-   Calculam distana folosind euclid
- **/
+        /**
+         Calculam distana folosind euclid
+         **/
         double distance = Math.sqrt(Math.pow(loc1.getX() - loc2.getX(), 2) +
                 Math.pow(loc1.getY() - loc2.getY(), 2));
 

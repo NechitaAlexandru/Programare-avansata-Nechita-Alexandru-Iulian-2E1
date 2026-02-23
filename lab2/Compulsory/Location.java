@@ -34,13 +34,11 @@ class Location {
 
     public double getY() { return y; }
     public void setY(double y) { this.y = y; }
-/**
- Modificam toString
- **/
+    /**
+     Modificam toString
+     **/
     @Override
     public String toString() {
         return "Location{name='" + name + "', type='" + type + "', x=" + x + ", y=" + y + "}";
     }
 }
-
-
