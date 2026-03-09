@@ -1,4 +1,4 @@
-package Compulsory;
+package source;
 
 public interface Profile {
     String getId();
